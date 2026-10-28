@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard | PawHaven</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body data-dashboard-role="user">
+
+<nav class="navbar">
+
+    <div class="container nav-content">
+
+        <a href="index.html" class="logo">
+            🐾 Paw<span>Haven</span>
+        </a>
+
+          <a href="index.html"
+              data-dashboard-logout
+           class="btn btn-outline btn-small">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="dashboard">
+
+    <div class="container">
+
+        <div class="dashboard-header">
+
+            <h1>
+                Welcome back! 🐾
+            </h1>
+
+            <p>
+                Here's an overview of your PawHaven activity.
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <p>🐾 Available Pets</p>
+
+                <div class="number">
+                    <span data-stat="availablePets">—</span>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <p>📋 Applications</p>
+
+                <div class="number">
+                    <span data-stat="applications">—</span>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <p>🐕 Adopted</p>
+
+                <div class="number">
+                    <span data-stat="adopted">—</span>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <p>🚨 Rescue Reports</p>
+
+                <div class="number">
+                    <span data-stat="rescueReports">—</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p id="dashboardMessage" class="dashboard-message" role="status"></p>
+
+        <div class="dashboard-table">
+
+            <h2>
+                My Applications
+            </h2>
+
+            <br>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Pet</th>
+                        <th>Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="dashboardAdoptions"></tbody>
+
+            </table>
+
+        </div>
+
+        <div class="dashboard-table">
+            <h2>My Rescue Reports</h2>
+            <br>
+            <table>
+                <thead><tr><th>Animal</th><th>Location</th><th>Emergency</th><th>Status</th><th>Date</th></tr></thead>
+                <tbody id="dashboardRescues"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

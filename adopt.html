@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Adopt a Pet | PawHaven</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="container nav-content">
+
+        <a href="index.html" class="logo">
+            🐾 Paw<span>Haven</span>
+        </a>
+
+        <button class="menu-toggle"
+                id="menuToggle">
+            ☰
+        </button>
+
+        <ul class="nav-links"
+            id="navLinks">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="adopt.html"
+                   class="active">
+                    Adopt
+                </a>
+            </li>
+
+            <li>
+                <a href="rescue.html">
+                    Rescue
+                </a>
+            </li>
+
+            <li>
+                <a href="how-it-works.html">
+                    How It Works
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="nav-buttons">
+
+            <a href="login.html"
+               class="btn btn-outline btn-small">
+                Login
+            </a>
+
+            <a href="register.html"
+               class="btn btn-primary btn-small">
+                Register
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<header class="page-header">
+
+    <div class="container">
+
+        <h1>Find Your New Best Friend 🐾</h1>
+
+        <p>
+            Browse pets waiting for their forever home.
+        </p>
+
+    </div>
+
+</header>
+
+
+<main class="section">
+
+    <div class="container">
+
+        <div class="filter-box">
+
+            <div class="filter-grid">
+
+                <input
+                    type="search"
+                    id="searchPet"
+                    class="form-control"
+                    placeholder="🔍 Search by name or breed">
+
+                <select id="speciesFilter"
+                        class="form-control">
+
+                    <option value="">All Species</option>
+                    <option value="Dog">Dogs</option>
+                    <option value="Cat">Cats</option>
+
+                </select>
+
+                <select id="breedFilter"
+                        class="form-control">
+
+                    <option value="">All Breeds</option>
+                    <option value="Labrador">Labrador</option>
+                    <option value="Persian">Persian</option>
+                    <option value="Indie">Indie</option>
+                    <option value="Beagle">Beagle</option>
+                    <option value="Domestic Shorthair">
+                        Domestic Shorthair
+                    </option>
+                    <option value="Siamese">Siamese</option>
+
+                </select>
+
+                <select id="genderFilter"
+                        class="form-control">
+
+                    <option value="">Any Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+
+                </select>
+
+                <select id="locationFilter"
+                        class="form-control">
+
+                    <option value="">All Locations</option>
+                    <option value="Coimbatore">
+                        Coimbatore
+                    </option>
+                    <option value="Chennai">
+                        Chennai
+                    </option>
+                    <option value="Bangalore">
+                        Bangalore
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div id="petContainer"
+             class="pet-grid">
+
+            <p>Loading pets...</p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            © <span id="year"></span> PawHaven
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+<script src="js/pets.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | PawHaven</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body data-dashboard-role="admin">
+
+<nav class="navbar">
+
+    <div class="container nav-content">
+
+        <a href="index.html" class="logo">
+            🐾 Paw<span>Haven</span>
+        </a>
+
+          <a href="index.html"
+              data-dashboard-logout
+           class="btn btn-outline btn-small">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="dashboard">
+
+    <div class="container">
+
+        <div class="dashboard-header">
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+            <p>
+                Monitor and manage the PawHaven platform.
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <p>Total Pets</p>
+
+                <div class="number">
+                    <span data-stat="pets">—</span>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <p>Adoptions</p>
+
+                <div class="number">
+                    <span data-stat="adoptions">—</span>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <p>Rescue Cases</p>
+
+                <div class="number">
+                    <span data-stat="rescues">—</span>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <p>Users</p>
+
+                <div class="number">
+                    <span data-stat="users">—</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p id="dashboardMessage" class="dashboard-message" role="status"></p>
+
+        <div class="dashboard-table">
+
+            <h2>
+                Pending Adoption Applications
+            </h2>
+
+            <br>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Applicant</th>
+                        <th>Pet</th>
+                        <th>Shelter</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="dashboardAdoptions"></tbody>
+
+            </table>
+
+        </div>
+
+        <div class="dashboard-table">
+            <h2>Recent Rescue Reports</h2>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reporter</th>
+                        <th>Animal</th>
+                        <th>Location</th>
+                        <th>Emergency</th>
+                        <th>Status</th>
+                        <th>Update</th>
+                        <th>Assign Shelter</th>
+                    </tr>
+                </thead>
+                <tbody id="dashboardRescues"></tbody>
+            </table>
+        </div>
+
+        <div class="dashboard-table">
+            <h2>Pet Shelter Assignments</h2>
+            <br>
+            <table>
+                <thead>
+                    <tr><th>Pet</th><th>Species</th><th>Breed</th><th>Status</th><th>Shelter</th><th>Action</th></tr>
+                </thead>
+                <tbody id="dashboardPets"></tbody>
+            </table>
+        </div>
+
+        <div class="dashboard-table">
+            <h2>Contact Messages</h2>
+            <br>
+            <table>
+                <thead><tr><th>Name</th><th>Email</th><th>Subject</th><th>Message</th><th>Date</th></tr></thead>
+                <tbody id="dashboardMessages"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="js/dashboard.js"></script>
+</body>
+
+</html>

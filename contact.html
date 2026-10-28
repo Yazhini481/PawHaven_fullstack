@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | PawHaven</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="container nav-content">
+
+        <a href="index.html" class="logo">
+            🐾 Paw<span>Haven</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="rescue.html">Rescue</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+                <a href="contact.html"
+                   class="active">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+<header class="page-header">
+
+    <div class="container">
+
+        <h1>Get in Touch 💌</h1>
+
+        <p>
+            We'd love to hear from you.
+        </p>
+
+    </div>
+
+</header>
+
+
+<main class="section">
+
+    <div class="container contact-grid">
+
+
+        <div class="contact-card">
+
+            <h2>
+                Contact Information
+            </h2>
+
+            <div class="contact-item">
+
+                <strong>📍 Address</strong>
+
+                Coimbatore, Tamil Nadu, India
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>📞 Phone</strong>
+
+                +91 98765 43210
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>✉ Email</strong>
+
+                hello@pawhaven.com
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>🌐 Follow Us</strong>
+
+                <a href="#">
+                    Instagram
+                </a>
+                |
+                <a href="#">
+                    Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-container">
+
+            <div id="contactSuccess"
+                 class="success-message">
+            </div>
+
+
+            <form id="contactForm">
+
+                <div class="form-group">
+
+                    <label for="contactName">
+                        Name
+                    </label>
+
+                    <input type="text"
+                           id="contactName"
+                           class="form-control"
+                           required>
+
+                    <span id="contactNameError"
+                          class="error-message">
+                    </span>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="contactEmail">
+                        Email
+                    </label>
+
+                    <input type="email"
+                           id="contactEmail"
+                           class="form-control"
+                           required>
+
+                    <span id="contactEmailError"
+                          class="error-message">
+                    </span>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Subject
+                    </label>
+
+                        <select id="contactSubject"
+                            class="form-control">
+
+                        <option>
+                            Adoption
+                        </option>
+
+                        <option>
+                            Rescue
+                        </option>
+
+                        <option>
+                            Shelter Partnership
+                        </option>
+
+                        <option>
+                            General Enquiry
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="contactMessage">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="contactMessage"
+                        class="form-control"
+                        required></textarea>
+
+                    <span id="contactMessageError"
+                          class="error-message">
+                    </span>
+
+                </div>
+
+
+                <button type="submit"
+                        class="btn btn-primary">
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="js/validation.js"></script>
+
+</body>
+
+</html>

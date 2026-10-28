@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Report a Rescue | PawHaven</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="container nav-content">
+
+        <a href="index.html" class="logo">
+            🐾 Paw<span>Haven</span>
+        </a>
+
+        <button class="menu-toggle"
+                id="menuToggle">
+            ☰
+        </button>
+
+        <ul class="nav-links"
+            id="navLinks">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="rescue.html" class="active">Rescue</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+        <div class="nav-buttons">
+
+            <a href="login.html"
+               class="btn btn-outline btn-small">
+                Login
+            </a>
+
+            <a href="register.html"
+               class="btn btn-primary btn-small">
+                Register
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<header class="page-header">
+
+    <div class="container">
+
+        <h1>See an Animal in Need? 🚨</h1>
+
+        <p>
+            Your quick action could save a life.
+        </p>
+
+    </div>
+
+</header>
+
+
+<main class="section">
+
+    <div class="form-container">
+
+        <div id="rescueSuccess"
+             class="success-message">
+        </div>
+
+        <form id="rescueForm">
+
+            <div class="form-section">
+
+                <h3>Animal Information</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="animalType">
+                            Animal Type
+                        </label>
+
+                        <select id="animalType"
+                                class="form-control"
+                                required>
+
+                            <option value="">
+                                Select animal
+                            </option>
+
+                            <option value="Dog">
+                                Dog
+                            </option>
+
+                            <option value="Cat">
+                                Cat
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                        <span id="animalTypeError"
+                              class="error-message">
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="rescueLocation">
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="rescueLocation"
+                            class="form-control"
+                            placeholder="Where did you find the animal?"
+                            required>
+
+                        <span id="locationError"
+                              class="error-message">
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h3>Rescue Details</h3>
+
+                <div class="form-group">
+
+                    <label>
+                        Emergency Level
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="emergency"
+                               value="Low"
+                               required>
+                        Low
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="emergency"
+                               value="Medium">
+                        Medium
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="emergency"
+                               value="High">
+                        🔴 Emergency
+                    </label>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="condition">
+                        Condition
+                    </label>
+
+                    <select id="condition"
+                            class="form-control">
+
+                        <option>
+                            Injured
+                        </option>
+
+                        <option>
+                            Abandoned
+                        </option>
+
+                        <option>
+                            Lost
+                        </option>
+
+                        <option>
+                            Sick
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="rescueDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="rescueDescription"
+                        class="form-control"
+                        placeholder="Describe the animal's condition..."
+                        required></textarea>
+
+                    <span id="descriptionError"
+                          class="error-message">
+                    </span>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="rescueImage">
+                        Upload Image
+                    </label>
+
+                    <input type="file"
+                           id="rescueImage"
+                           class="form-control"
+                           accept="image/*">
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h3>Your Contact Information</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="reporterName">
+                            Name
+                        </label>
+
+                        <input type="text"
+                               id="reporterName"
+                               class="form-control"
+                               required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="reporterPhone">
+                            Phone
+                        </label>
+
+                        <input type="tel"
+                               id="reporterPhone"
+                               class="form-control"
+                               pattern="[0-9]{10}"
+                               required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button type="submit"
+                    class="btn btn-coral">
+
+                🚨 Submit Rescue Request
+
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+
+<script src="js/main.js"></script>
+<script src="js/validation.js"></script>
+
+</body>
+
+</html>

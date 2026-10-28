@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login | PawHaven</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="page-header">
+
+    <div class="container">
+
+        <h1>Welcome Back 🐾</h1>
+
+        <p>
+            Login to continue your PawHaven journey.
+        </p>
+
+    </div>
+
+</header>
+
+
+<main class="section">
+
+    <div class="form-container">
+
+        <form id="loginForm">
+
+            <div class="form-section">
+
+                <h3>Login</h3>
+
+
+                <div class="form-group">
+
+                    <label for="loginEmail">
+                        Email Address
+                    </label>
+
+                    <input type="email"
+                           id="loginEmail"
+                           class="form-control"
+                           required>
+
+                    <span id="loginEmailError"
+                          class="error-message">
+                    </span>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <input type="password"
+                           id="loginPassword"
+                           class="form-control"
+                           required>
+
+                    <span id="loginPasswordError"
+                          class="error-message">
+                    </span>
+
+                </div>
+
+
+                <button type="submit"
+                        class="btn btn-primary">
+
+                    Login
+
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <p style="text-align:center">
+
+            Don't have an account?
+
+            <a href="register.html"
+               style="color:#557a61;font-weight:700">
+
+                Register
+
+            </a>
+
+        </p>
+
+    </div>
+
+</main>
+
+
+<script src="js/validation.js"></script>
+
+</body>
+
+</html>

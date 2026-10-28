@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Shelter Dashboard | PawHaven</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body data-dashboard-role="shelter">
+
+<nav class="navbar">
+
+    <div class="container nav-content">
+
+        <a href="index.html" class="logo">
+            🐾 Paw<span>Haven</span>
+        </a>
+
+          <a href="index.html"
+              data-dashboard-logout
+           class="btn btn-outline btn-small">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="dashboard">
+
+    <div class="container">
+
+        <div class="dashboard-header">
+
+            <h1>
+                Shelter Dashboard 🏠
+            </h1>
+
+            <p>
+                Manage your pets, adoption applications
+                and rescue cases.
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <p>Total Pets</p>
+
+                <div class="number">
+                    <span data-stat="pets">—</span>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <p>Available</p>
+
+                <div class="number">
+                    <span data-stat="availablePets">—</span>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <p>Applications</p>
+
+                <div class="number">
+                    <span data-stat="adoptions">—</span>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <p>Rescue Cases</p>
+
+                <div class="number">
+                    <span data-stat="rescues">—</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p id="dashboardMessage" class="dashboard-message" role="status"></p>
+
+        <div class="dashboard-table">
+            <h2>Add a Pet</h2>
+            <br>
+            <form id="petForm" class="dashboard-pet-form">
+                <div class="form-grid">
+                    <div class="form-group"><label for="petName">Name</label><input id="petName" class="form-control" required maxlength="100"></div>
+                    <div class="form-group"><label for="petSpecies">Species</label><select id="petSpecies" class="form-control" required><option value="">Select</option><option>Dog</option><option>Cat</option><option>Other</option></select></div>
+                    <div class="form-group"><label for="petBreed">Breed</label><input id="petBreed" class="form-control" required maxlength="100"></div>
+                    <div class="form-group"><label for="petAge">Age (years)</label><input id="petAge" type="number" min="0" max="40" class="form-control" required></div>
+                    <div class="form-group"><label for="petGender">Gender</label><select id="petGender" class="form-control" required><option value="">Select</option><option>Male</option><option>Female</option><option>Unknown</option></select></div>
+                    <div class="form-group"><label for="petLocation">Location</label><input id="petLocation" class="form-control" required maxlength="120"></div>
+                    <div class="form-group"><label for="petHealth">Health</label><input id="petHealth" class="form-control" maxlength="120" value="Healthy"></div>
+                    <div class="form-group"><label for="petImage">Image URL</label><input id="petImage" class="form-control" maxlength="500" placeholder="images/pet.jpg"></div>
+                </div>
+                <label><input id="petVaccinated" type="checkbox"> Vaccinated</label>
+                <label><input id="petDewormed" type="checkbox"> Dewormed</label>
+                <div class="form-group"><label for="petDescription">Description</label><textarea id="petDescription" class="form-control" maxlength="4000"></textarea></div>
+                <button class="btn btn-primary" type="submit">Add Pet</button>
+            </form>
+        </div>
+
+        <div class="dashboard-table">
+
+            <h2>
+                Recent Adoption Applications
+            </h2>
+
+            <br>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Applicant</th>
+                        <th>Pet</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Update</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="dashboardAdoptions"></tbody>
+
+            </table>
+
+        </div>
+
+        <div class="dashboard-table">
+            <h2>Assigned Rescue Reports</h2>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reporter</th>
+                        <th>Animal</th>
+                        <th>Location</th>
+                        <th>Emergency</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="dashboardRescues"></tbody>
+            </table>
+        </div>
+
+        <div class="dashboard-table">
+            <h2>Your Pets</h2>
+            <br>
+            <table>
+                <thead><tr><th>Name</th><th>Species</th><th>Breed</th><th>Age</th><th>Status</th></tr></thead>
+                <tbody id="dashboardPets"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="js/dashboard.js"></script>
+</body>
+
+</html>

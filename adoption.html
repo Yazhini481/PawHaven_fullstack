@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Adoption Application | PawHaven</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="container nav-content">
+
+        <a href="index.html" class="logo">
+            🐾 Paw<span>Haven</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="rescue.html">Rescue</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+<header class="page-header">
+
+    <div class="container">
+
+        <h1>Adoption Application ❤️</h1>
+
+        <p>
+            Tell us a little about yourself and your home.
+        </p>
+
+    </div>
+
+</header>
+
+
+<main class="section">
+
+    <div class="form-container">
+
+        <div id="adoptionSuccess"
+             class="success-message">
+        </div>
+
+
+        <form id="adoptionForm">
+
+            <div class="form-section">
+
+                <h3>About You</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="applicantName">
+                            Full Name
+                        </label>
+
+                        <input type="text"
+                               id="applicantName"
+                               class="form-control"
+                               required>
+
+                        <span id="applicantNameError"
+                              class="error-message">
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="applicantEmail">
+                            Email
+                        </label>
+
+                        <input type="email"
+                               id="applicantEmail"
+                               class="form-control"
+                               required>
+
+                        <span id="applicantEmailError"
+                              class="error-message">
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone
+                        </label>
+
+                              <input id="applicantPhone"
+                                  type="tel"
+                               class="form-control"
+                               pattern="[0-9]{10}"
+                               required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Preferred Adoption Date
+                        </label>
+
+                              <input id="preferredDate"
+                                  type="date"
+                               class="form-control"
+                               required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h3>About Your Home</h3>
+
+                <div class="form-group">
+
+                    <label>
+                        Housing Type
+                    </label>
+
+                        <select id="housingType"
+                            class="form-control"
+                            required>
+
+                        <option value="">
+                            Select
+                        </option>
+
+                        <option>
+                            Independent House
+                        </option>
+
+                        <option>
+                            Apartment
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Do you currently have other pets?
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="otherPets"
+                               value="Yes"
+                               id="otherPetsYes"
+                               required>
+                        Yes
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="otherPets"
+                               value="No"
+                               id="otherPetsNo">
+                        No
+                    </label>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Do you have children at home?
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="children"
+                               value="Yes"
+                               id="childrenYes"
+                               required>
+                        Yes
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="children"
+                               value="No"
+                               id="childrenNo">
+                        No
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h3>About Adoption</h3>
+
+                <div class="form-group">
+
+                    <label for="reason">
+                        Why would you like to adopt?
+                    </label>
+
+                    <textarea
+                        id="reason"
+                        class="form-control"
+                        required></textarea>
+
+                    <span id="reasonError"
+                          class="error-message">
+                    </span>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+
+                        <input type="checkbox"
+                               id="agreement">
+
+                        I agree to provide a safe and loving
+                        home for the adopted pet.
+
+                    </label>
+
+                    <span id="agreementError"
+                          class="error-message">
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button type="submit"
+                    class="btn btn-coral">
+
+                ❤️ Submit Application
+
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+
+<script src="js/validation.js"></script>
+
+</body>
+
+</html>
